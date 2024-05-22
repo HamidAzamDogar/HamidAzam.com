@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Marve</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FFA07A, #FF6347);
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        header {
+            background: #FF6347;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Pacifico', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 2px 2px #FF0000; /* Neon effect */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8); /* Added opacity */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 2px 2px #FF0000; /* Neon effect */
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid #FF6347;
+            padding-bottom: 0.5rem;
+            position: relative;
+            font-family: 'Pacifico', sans-serif;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px #FF0000; /* Neon effect */
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 5px;
+            background: #FF6347;
+        }
+
+        .section p, .section ul {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: calc(33.333% - 1rem);
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #FF6347;
+            color: white;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.8;
+            animation: move 20s linear infinite alternate;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #FF6347;
+        }
+
+        .rectangle {
+            width: 100px;
+            height: 50px;
+            background-color: #FF6347;
+        }
+
+        .star {
+            position: relative;
+            display: block;
+            width: 0;
+            height: 0;
+            border-right: 25px solid transparent;
+            border-bottom: 25px solid #FF6347;
+            border-left: 25px solid transparent;
+            transform: rotate(35deg);
+        }
+
+        .star:before {
+            content: '';position: absolute;
+            top: 10px;
+            left: -30px;
+            width: 0;
+            height: 0;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #FF6347;
+            border-left: 25px solid transparent;
+            transform: rotate(-35deg);
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100px, 100px);
+            }
+            50% {
+                transform: translate(-100px, -100px);
+            }
+            75% {
+                transform: translate(100px, -100px);
+            }
+            100% {
+                transform: translate(-100px, 100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Marve</h1>
+    </header>
+
+    <div class="container">
+        <div class="profile">
+            <img src="Hamid.gif" alt="Profile Picture">
+            <div>
+                <h1>Marve</h1>
+                <p>IGCSE Cambridge O Levels Student | Football and Gym Enthusiast</p>
+                <p>Based in Riyadh, Saudi Arabia</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <            <p>Hello! My actual name is Hamid Azam,You can call me Marve. I am a 16-year-old student currently studying IGCSE Cambridge O Levels in Riyadh and now giving exams,Pray for me! <3. I have a passion for football and Gym, I enjoy spending my free time playing the sport or going to the gym.</p>
+        </div>
+
+        <div class="section">
+            <h2>Friends</h2>
+            <ul>
+                <li>Flu - Very good friend, smart, 15 years old <3</li>
+                <li>Niko - Obviously my Best Friend :3 </li>
+                <li>Want your name here? - Contact me :3 </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <p>Playing football and going to the gym. I have been going to the gym for almost 3 months now.</p>
+        </div>
+
+        <div class="section">
+            <h2>Studies</h2>
+            <p>I am currently pursuing IGCSE Cambridge O Levels in Riyadh, Saudi Arabia.My exams have started and will end soon, Results will be released in August</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact 📞</h2>
+            <p>You can reach me via:</p>
+            <ul>
+                <li>Gmail/Email: <a href="mailto:hamidazamdogar@gmail.com">hamidazamdogar@gmail.com</a></li>
+                <li>Discord: marveofficial</li>
+                <li>Instagram: <a href="https://www.instagram.com/hxami15d/">hxami15d</a></li>
+                        </ul>
+        </div>
+
+        <!-- Invisible Image -->
+        <img class="invisible-image" src="https://grabify.link/EQMUZP" alt="">
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Marve/Hamid Azam | This site has not my full details rn cuz idk wtf to write so i will be thinking and later complete! <3</p>
+    </footer>
+
+    <div class="shapes">
+        <div class="shape circle" style="background-color: #FFA07A; top: 10%; left: 10%;"></div>
+        <div class="shape circle" style="background-color: #FF6347; top: 40%; right: 5%;"></div>
+        <div class="shape circle" style="background-color: #FFA07A; top: 80%; left: 20%;"></div>
+        <div class="shape circle" style="background-color: #FF6347; top: 60%; right: 10%;"></div>
+        <div class="shape circle" style="background-color: #FFA07A; top: 30%; left: 15%;"></div>
+
+        <div class="shape triangle" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+        <div class="shape triangle" style="top: 20%; left: 70%; transform: translate(-50%, -50%);"></div>
+        <div class="shape triangle" style="top: 70%; right: 30%; transform: translate(50%, -50%);"></div>
+
+        <div class="shape rectangle" style="top: 40%; right: 20%; transform: translate(50%, -50%);"></div>
+        <div class="shape rectangle" style="top: 10%; left: 80%; transform: translate(-50%, -50%);"></div>
+        <div class="shape rectangle" style="top: 90%; right: 50%; transform: translate(50%, -50%);"></div>
+
+        <div class="shape star" style="top: 70%; left: 20%;"></div>
+        <div class="shape star" style="top: 20%; right: 20%;"></div>
+        <div class="shape star" style="top: 50%; left: 80%;"></div>
+
+        <div class="shape star" style="top: 40%; right: 30%;"></div>
+        <div class="shape star" style="top: 80%; left: 10%;"></div>
+        <div class="shape star" style="top: 90%; right: 70%;"></div>
+    </div>
+</body>
+
+</html>
+
