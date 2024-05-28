@@ -137,7 +137,7 @@
             height: 100%;
             pointer-events: none;
             overflow: hidden;
-            z-index: 0;
+            z-index: -1; /* Changed to -1 */
         }
 
         .shape {
@@ -284,8 +284,28 @@
 
     <div class="shapes">
         <!-- Your existing shapes -->
+        <div class="shape circle" style="background-color: #FFA07A; top: 10%; left: 10%;"></div>
+        <div class="shape circle" style="background-color: #FF6347; top: 40%; right: 5%;"></div>
+        <div class="shape circle" style="background-color: #FFA07A; top: 80%; left: 20%;"></div>
+        <div class="shape circle" style="background-color: #FF6347; top: 60%; right: 10%;"></div>
+        <div class="shape circle" style="background-color: #FFA07A; top: 30%; left: 15%;"></div>
+
+        <div class="shape triangle" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+        <div class="shape triangle" style="top: 20%; left: 70%; transform: translate(-50%, -50%);"></div>
+        <div class="shape triangle" style="top: 70%; right: 30%; transform: translate(50%, -50%);"></div>
+
+        <div class="shape rectangle" style="top: 40%; right: 20%; transform: translate(50%, -50%);"></div>
+        <div class="shape rectangle" style="top: 10%; left: 80%; transform: translate(-50%, -50%);"></div>
+        <div class="shape rectangle" style="top: 90%; right: 50%; transform: translate(50%, -50%);"></div>
+
+        <div class="shape star" style="top: 70%; left: 20%;"></div>
+        <div class="shape star" style="top: 20%; right: 20%;"></div>
+        <div class="shape star" style="top: 50%; left: 80%;"></div>
+
+        <div class="shape star" style="top: 40%; right: 30%;"></div>
+        <div class="shape star" style="top: 80%; left: 10%;"></div>
+        <div class="shape star" style="top: 90%; right: 70%;"></div>
     </div>
 </body>
 
 </html>
-
